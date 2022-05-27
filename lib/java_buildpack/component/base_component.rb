@@ -99,6 +99,9 @@ module JavaBuildpack
             print 'heeey!'
             print file
             print 'there!'
+            if name == "Luna Security Provider"
+              print "it's the Luna Security Provider, everybody!"
+            end
           end
 
           yield file
