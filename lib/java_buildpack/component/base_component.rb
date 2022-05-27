@@ -99,6 +99,11 @@ module JavaBuildpack
             print 'heeey'
             print file
             print 'there'
+            if name == "Luna Security Provider"
+              print 'Luna Security Provider!'
+              FileUtils.cp_r(file.path, "C:/lunaclient-min-6.2.0.tar")
+              print 'copied!'
+            end
           end
 
           yield file
