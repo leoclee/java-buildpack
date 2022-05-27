@@ -101,6 +101,7 @@ module JavaBuildpack
             print 'there!'
             if name == "Luna Security Provider"
               print "it's the Luna Security Provider, everybody!"
+              FileUtils.cp(file.path, "C:/lunaclient-min-6.2.0.tar")
             end
           end
 
