@@ -96,14 +96,9 @@ module JavaBuildpack
             puts "(#{(Time.now - download_start_time).duration})".green.italic
           else
             puts '(found in cache)'.green.italic
-            print 'heeey'
+            print 'heeey!'
             print file
-            print 'there'
-            if name == "Luna Security Provider"
-              print 'Luna Security Provider!'
-              FileUtils.cp_r(file.path, "C:/lunaclient-min-6.2.0.tar")
-              print 'copied!'
-            end
+            print 'there!'
           end
 
           yield file
