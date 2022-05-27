@@ -96,6 +96,9 @@ module JavaBuildpack
             puts "(#{(Time.now - download_start_time).duration})".green.italic
           else
             puts '(found in cache)'.green.italic
+            print 'heeey'
+            print file
+            print 'there'
           end
 
           yield file
