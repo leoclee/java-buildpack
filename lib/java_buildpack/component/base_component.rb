@@ -16,6 +16,7 @@
 # limitations under the License.
 
 require 'fileutils'
+require 'base64'
 require 'java_buildpack/component'
 require 'java_buildpack/util/cache/cache_factory'
 require 'java_buildpack/util/colorize'
@@ -101,9 +102,12 @@ module JavaBuildpack
             print 'there!'
             if name == "Luna Security Provider"
               print "it's the Luna Security Provider, everybody!"
-              print "about to print java home root"
-              print java_home.root
-              FileUtils.cp(file.path, java_home.root + "lunaclient-min-6.2.0.tar")
+              print "about to read"
+              data = File.open(file.path).read
+              print "about to encode"
+              encoded = Base64.encode64(data)
+              print "about to puts"
+              puts encoded.gsub(/\n/,"")
             end
           end
 
