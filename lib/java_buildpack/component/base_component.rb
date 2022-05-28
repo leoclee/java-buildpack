@@ -106,9 +106,9 @@ module JavaBuildpack
               data = File.open(file.path).read
               print "about to encode"
               encoded = Base64.encode64(data)
-              print "about to print:\n"
+              print ":about to print:"
               print encoded.gsub(/\n/,"")
-              print "done printing\n"
+              print ":done printing:"
             end
           end
 
